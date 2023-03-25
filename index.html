@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+  <a-scene vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam;
+  sourceWidth:1280; sourceHeight:960;
+  displayWidth: 1280; displayHeight: 960;
+  debugUIEnabled: false;">
+
+  <a-assets>
+    <img id="card1" src="./VR-AR-ProjectCards/Game Development.png">
+    <img id="card2" src="./VR-AR-ProjectCards/App Development.png">
+    <img id="card3" src="./VR-AR-ProjectCards/Python.jpg">
+    <img id="card4" src="./VR-AR-ProjectCards/VR.jpeg">
+    <img id="card5" src="./VR-AR-ProjectCards/AR.jpg">
+  </a-assets>
+
+    <!--Project Game Development-->
+    <a-marker type="pattern" url="pattern-marker/ar-game-development/pattern-Game Development.patt">
+      <a-plane src="#card1" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+
+  <!--Project App Development-->
+  <a-marker type="pattern" url="pattern-marker/ar-app-development/pattern-App Development.patt">
+    <a-plane src="#card2" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+  </a-marker>
+
+    <!--Project Python-->
+    <a-marker type="pattern" url="pattern-marker/ar-python/pattern-Python.patt">
+      <a-plane src="#card3" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+
+      <!--Project VR-->
+  <a-marker type="pattern" url="pattern-marker/ar-VR/pattern-VR.patt">
+    <a-plane src="#card4" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+  </a-marker>
+
+    <!--Project AR-->
+    <a-marker type="pattern" url="pattern-marker/ar-AR/pattern-AR.patt">
+      <a-plane src="#card5" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" ></a-plane>
+    </a-marker>
+ 
+</a-scene>
+ 
+</body>
+
+</html>
